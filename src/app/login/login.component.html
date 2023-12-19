@@ -1,0 +1,31 @@
+<div class="row" style="margin-top: 60px;">
+    <div class="col-lg-7 p-0">
+        <div class="ms-5 my-5">
+            <img src="https://cdn.wallpapersafari.com/89/94/KycE8k.png" style="height: 500px;" class="img-fluid" alt="login image wallpaper">
+        </div>
+    </div>
+    <div class="col-lg-5 p-0">
+        <div class="bg-info text-dark me-5 my-5 d-flex flex-column align-items-center justify-content-center" style="height: 500px;">
+            <h5 class="fw-bold my-3" style="overflow-y: hidden;">Welcome User</h5>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+<form [formGroup]="loginForm">
+    
+                    <input formControlName="email" name="email" type="text" style="width: 300px;margin-bottom: 15px;" class="form-control" placeholder="Please enter emailid">
+                    <div *ngIf="loginForm.get('email')?.errors&&loginForm.get('email')?.touched" class="fw-bolder mt-3 text-light">
+                        *Invalid email
+                    </div>
+                    <input formControlName="password" name="password" type="password" style="width: 300px;margin-bottom: 15px;" class="form-control" placeholder="Please enter password">
+
+                    <div *ngIf="loginForm.get('password')?.errors&&loginForm.get('password')?.touched" class="fw-bolder mt-3 text-light">
+                        *Invalid email
+
+                    </div>
+                    <button class="btn btn-dark w-50 my-2">Login</button>
+                    
+</form>
+            </div>
+
+            <p>New User ? Click here to <a class="text-light" routerLink="/user/register">Register</a></p>
+        </div>
+    </div>
+</div>
